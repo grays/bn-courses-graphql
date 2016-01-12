@@ -1,0 +1,24 @@
+{
+  "name": "bn-data-spider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bnBatchQuery.js",
+  "dependencies": {
+    "events": "^1.1.0",
+    "assert": "^1.3.0",
+    "request": "^2.67.0",
+    "fs": "^0.0.2",
+    "casper": "^0.1.1",
+    "subprocess": "^0.3.0",
+    "url": "^0.11.0",
+    "jsdom": "^7.2.2",
+    "spooky": "^0.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
