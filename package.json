@@ -1,24 +1,30 @@
 {
-  "name": "bn-data-spider",
-  "version": "1.0.0",
-  "description": "",
-  "main": "bnBatchQuery.js",
-  "dependencies": {
-    "events": "^1.1.0",
-    "assert": "^1.3.0",
-    "request": "^2.67.0",
-    "fs": "^0.0.2",
-    "casper": "^0.1.1",
-    "subprocess": "^0.3.0",
-    "url": "^0.11.0",
-    "jsdom": "^7.2.2",
-    "spooky": "^0.2.5"
-  },
-  "devDependencies": {},
+  "name": "relay-starter-kit",
+  "private": true,
+  "description": "A quick way to get up and running with Relay",
+  "repository": "facebook/relay-starter-kit",
+  "version": "0.1.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node ./server.js",
+    "update-schema": "babel-node ./scripts/updateSchema.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "babel-core": "6.3.21",
+    "babel-loader": "6.2.0",
+    "babel-polyfill": "6.3.14",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "babel-preset-stage-0": "6.3.13",
+    "babel-relay-plugin": "0.6.3",
+    "classnames": "2.2.1",
+    "express": "4.13.3",
+    "express-graphql": "0.4.5",
+    "graphql": "0.4.14",
+    "graphql-relay": "0.3.6",
+    "react": "0.14.3",
+    "react-dom": "0.14.3",
+    "react-relay": "0.6.1",
+    "webpack": "1.12.9",
+    "webpack-dev-server": "1.14.0"
+  }
 }

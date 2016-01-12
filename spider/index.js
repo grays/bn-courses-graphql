@@ -1,14 +1,14 @@
 const EventEmitter = require('events');
 const util = require('util');
 
-var qc = require('../../ops/data/URLs').queryConstructor;
-var codes = require('../../ops/data/codes').codes;
-var emitStoreIds = require('./emitStoreIds').emitStoreIds;
-var emitCampusIds = require('./emitCampusIds').emitCampusIds;
-var emitTermIds = require('./emitQueryIds').emitTermIds;
-var emitDeptIds = require('./emitQueryIds').emitDeptIds;
-var emitCourseIds = require('./emitQueryIds').emitCourseIds;
-var emitSectionIds = require('./emitQueryIds').emitSectionIds;
+var qc = require('./ops/data/URLs').queryConstructor;
+var codes = require('./ops/data/codes').codes;
+var emitStoreIds = require('./src/bn/emitStoreIds').emitStoreIds;
+var emitCampusIds = require('./src/bn/emitCampusIds').emitCampusIds;
+var emitTermIds = require('./src/bn/emitQueryIds').emitTermIds;
+var emitDeptIds = require('./src/bn/emitQueryIds').emitDeptIds;
+var emitCourseIds = require('./src/bn/emitQueryIds').emitCourseIds;
+var emitSectionIds = require('./src/bn/emitQueryIds').emitSectionIds;
 
 function BnDataEmitter () {
 	EventEmitter.call(this);
@@ -184,6 +184,4 @@ bnDataEmitter.on('storeId-kv-pair', function (k, v, count) {
 		emitCampusIds(verbose, bnDataEmitter, storeId, storeName);
 	}
 });
-
-exports.startFullSpider = function() { emitStoreIds(verbose, bnDataEmitter); };
-exports.ee = bnDataEmitter;
+emitStoreIds(verbose, bnDataEmitter);
